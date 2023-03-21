@@ -1,0 +1,13 @@
+---
+- name: pull mini_project image
+  hosts: all
+  tasks:
+
+
+          - name: pull the image
+            docker_image:
+                name: jayanth771/calculator
+                source: pull
+
+          - name: creating updated container
+            shell: docker run -id jayanth771/calculator
